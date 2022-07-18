@@ -1,0 +1,20 @@
+def binarysearch(a,low,high,s):
+    if high>=low:
+        mid=(low+high)//2
+        if a[mid]==s:
+            return mid
+        elif s<a[mid]:
+            return binarysearch(a,low,mid-1,s)
+        elif s>a[mid]:
+            return binarysearch(a,mid+1,high,s)
+    return -1
+a=[4,6,14,24,34,467,646]
+s=34
+n=len(a)
+low=0
+high=n-1
+res=binarysearch(a,low,high,s)
+if res==-1:
+    print('element not found')
+else:
+    print('element found at index location:',res) 
