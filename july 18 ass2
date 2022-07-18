@@ -1,0 +1,8 @@
+def isPerfectSquare(num):
+    for i in range(num):
+        if i*i==num:
+            return True
+    return False
+num=int(input())
+l=isPerfectSquare(num)
+print(l)
